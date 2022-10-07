@@ -1,3 +1,5 @@
+new syscall PM_GETLCAPID which gives id of process which is the LCA (lowest common ancestor) of 2 given processes
+
 Skrypt sync.sh kopiuje zmienione pliki na MINIX-a.
 
 Na MINIX-ie należy zainstalować rsync:
