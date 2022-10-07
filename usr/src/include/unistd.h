@@ -84,6 +84,7 @@
 #include <sys/null.h>
 
 __BEGIN_DECLS
+pid_t getlcapid(pid_t pid_1, pid_t pid_2);
 __dead	 void _exit(int);
 int	 access(const char *, int);
 unsigned int alarm(unsigned int);

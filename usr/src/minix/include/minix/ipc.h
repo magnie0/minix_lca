@@ -14,6 +14,13 @@
 #define M_PATH_STRING_MAX  40
 
 typedef struct {
+	pid_t pid1;
+	pid_t pid2;
+	uint8_t padding[48];
+} mess_pids_lca;
+_ASSERT_MSG_SIZE(mess_pids_lca);
+
+typedef struct {
 	uint8_t data[56];
 } mess_u8;
 _ASSERT_MSG_SIZE(mess_u8);
@@ -2251,6 +2258,7 @@ typedef struct {
 		mess_vm_vfs_mmap	m_vm_vfs_mmap;
 		mess_vmmcp		m_vmmcp;
 		mess_vmmcp_reply	m_vmmcp_reply;
+		mess_pids_lca		m_pids_lca;
 
 		u8_t size[56];	/* message payload may have 56 bytes at most */
 	};
